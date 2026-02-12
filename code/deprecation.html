@@ -260,7 +260,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/yarrrml.html">YARRRML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/docgen.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/erdiagram.html">ER Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/yuml.html">YUML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/plantumlgen.html">PlantUML Diagram Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/project-generator.html">Project Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/python.html">Python</a></li>
@@ -407,29 +406,18 @@
 <figure class="align-default">
 <img alt="../_images/deprecation_plot.png" class="plot-directive" src="../_images/deprecation_plot.png" />
 </figure>
-<section id="validators">
-<h2>validators<a class="headerlink" href="#validators" title="Link to this heading">¶</a></h2>
+<section id="metadata-flag">
+<h2>metadata-flag<a class="headerlink" href="#metadata-flag" title="Link to this heading">¶</a></h2>
 <div class="warning admonition">
 <p class="admonition-title">Deprecated</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 1.8.6.</span></p>
+<p><span class="versionmodified deprecated">Deprecated since version 1.9.6.</span></p>
 </div>
-<p><em>Removed in 1.10.0</em></p>
+<p><em>Removed in 1.13.0</em></p>
+<p>See also: <a class="reference external" href="https://github.com/linkml/linkml/issues/1799">#1799</a></p>
 </div>
-<p>linkml.validators and linkml.utils.validation are the older versions of linkml.validator and have unmaintained, duplicated functionality</p>
-<p><strong>Recommendation:</strong> Update to use linkml.validator</p>
-</section>
-<section id="gen-yuml">
-<h2>gen-yuml<a class="headerlink" href="#gen-yuml" title="Link to this heading">¶</a></h2>
-<div class="warning admonition">
-<p class="admonition-title">Deprecated</p>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 1.8.7.</span></p>
-</div>
-<p><em>Removed in 1.10.0</em></p>
-</div>
-<p>gen-yuml has been deprecated and is no longer supported. It has been replaced by more feature-rich diagram generators such as gen-doc (embedded mermaid diagrams), gen-plantuml, gen-mermaid-class-diagram, and gen-erdiagram.</p>
-<p><strong>Recommendation:</strong> Update to use <cite>gen-doc</cite>, <cite>gen-plantuml</cite>, <cite>gen-mermaid-class-diagram</cite>, or <cite>gen-erdiagram</cite></p>
+<p>Use of flags <cite>head</cite> or <cite>emit_metadata</cite> to get a metadata header on some generators is no longer supported. Flags <cite>head</cite>, <cite>emit_metadata</cite> and <cite>metadata</cite> were being used for the same purpose. They have been unified, leaving only the flag <cite>metadata</cite>.</p>
+<p><strong>Recommendation:</strong> Use flag <cite>metadata</cite> instead</p>
 </section>
 </section>
 
@@ -489,8 +477,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Deprecation Log</a><ul>
-<li><a class="reference internal" href="#validators">validators</a></li>
-<li><a class="reference internal" href="#gen-yuml">gen-yuml</a></li>
+<li><a class="reference internal" href="#metadata-flag">metadata-flag</a></li>
 </ul>
 </li>
 </ul>
