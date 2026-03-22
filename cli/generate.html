@@ -308,6 +308,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -2003,6 +2004,18 @@ if an override is not found.</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-generate-full-java-visitor">
+<span class="sig-name descname"><span class="pre">--visitor</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;visitor&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-generate-full-java-visitor" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a visitor interface for the specified class</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-generate-full-java-extra-template">
+<span class="sig-name descname"><span class="pre">--extra-template</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;extra_template&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-generate-full-java-extra-template" title="Link to this definition">¶</a></dt>
+<dd><p>Name of an additional, arbitrary template to use</p>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-java-generate-records">
 <span id="cmdoption-linkml-generate-full-java-no-generate-records"></span><span class="sig-name descname"><span class="pre">--generate-records</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-generate-records</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-java-generate-records" title="Link to this definition">¶</a></dt>
 <dd><p>Optional Java 17 record implementation
@@ -2525,6 +2538,17 @@ YAML, and including it when necessary but not by default (e.g. in documentation 
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-generate-full-jsonld-context-exclude-imports">
+<span id="cmdoption-linkml-generate-full-jsonld-context-include-imports"></span><span class="sig-name descname"><span class="pre">--exclude-imports</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--include-imports</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-jsonld-context-exclude-imports" title="Link to this definition">¶</a></dt>
+<dd><p>Use –exclude-imports to exclude imported elements from the generated JSON-LD context. This is useful when extending an ontology whose terms already have context definitions in their own JSON-LD context file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-jsonld-context-V">
 <span id="cmdoption-linkml-generate-full-jsonld-context-version"></span><span class="sig-name descname"><span class="pre">-V</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-jsonld-context-V" title="Link to this definition">¶</a></dt>
 <dd><p>Show the version and exit.</p>
@@ -3032,6 +3056,17 @@ to include metaclasses. To restore this behavior:</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-generate-full-owl-skip-abstract-class-as-unionof-subclasses">
+<span id="cmdoption-linkml-generate-full-owl-no-skip-abstract-class-as-unionof-subclasses"></span><span class="sig-name descname"><span class="pre">--skip-abstract-class-as-unionof-subclasses</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-skip-abstract-class-as-unionof-subclasses</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-owl-skip-abstract-class-as-unionof-subclasses" title="Link to this definition">¶</a></dt>
+<dd><p>If true, suppress rdfs:subClassOf owl:unionOf(subclasses) covering axioms for abstract classes. By default such axioms are emitted for every abstract class that has direct is_a children.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-owl-V">
 <span id="cmdoption-linkml-generate-full-owl-version"></span><span class="sig-name descname"><span class="pre">-V</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-owl-V" title="Link to this definition">¶</a></dt>
 <dd><p>Show the version and exit.</p>
@@ -3126,7 +3161,8 @@ to include metaclasses. To restore this behavior:</p>
 </section>
 <section id="linkml-generate-full-plantuml">
 <h4>plantuml<a class="headerlink" href="#linkml-generate-full-plantuml" title="Link to this heading">¶</a></h4>
-<p>Generate a UML representation of a LinkML model</p>
+<p>Generate a UML representation of a LinkML model.
+PlantUML code print out only if no directory provided.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>linkml<span class="w"> </span>generate<span class="w"> </span><span class="o">(</span>full<span class="o">)</span><span class="w"> </span>plantuml<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>YAMLFILE
 </pre></div>
 </div>
@@ -3140,7 +3176,7 @@ to include metaclasses. To restore this behavior:</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-plantuml-d">
 <span id="cmdoption-linkml-generate-full-plantuml-directory"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--directory</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-generate-full-plantuml-d" title="Link to this definition">¶</a></dt>
-<dd><p>Output directory - if supplied, PlantUML rendering will be saved in file</p>
+<dd><p>Output directory - if supplied, PlantUML rendering will be saved in file; otherwise, only PlantUML code will be printed out</p>
 </dd></dl>
 
 <dl class="std option">

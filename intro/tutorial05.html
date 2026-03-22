@@ -308,6 +308,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -483,7 +484,7 @@ for other languages</a>.</p>
 </pre></div>
 </div>
 <p>Outputs:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Person(id=&#39;ORCID:9876&#39;, full_name=&#39;Lex Luthor&#39;, aliases=[], phone=None, age=None)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Person({&#39;id&#39;: &#39;ORCID:9876&#39;, &#39;full_name&#39;: &#39;Lex Luthor&#39;})
 </pre></div>
 </div>
 <p>Hurray! Perhaps this is not very impressive in itself,
@@ -495,9 +496,11 @@ help with productivity and robustness of code.</p>
 <p>The LinkML runtime is a separate python library that provides methods needed by your generated datamodel classes, and utilities for converting your python objects into YAML, JSON, RDF, and TSV:</p>
 <p>test_runtime.py:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">linkml_runtime.dumpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">json_dumper</span>
+
 <span class="kn">from</span><span class="w"> </span><span class="nn">personinfo</span><span class="w"> </span><span class="kn">import</span> <span class="n">Person</span>
 
 <span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;ORCID:9876&#39;</span><span class="p">,</span> <span class="n">full_name</span><span class="o">=</span><span class="s1">&#39;Lex Luthor&#39;</span><span class="p">,</span> <span class="n">aliases</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Bad Guy&quot;</span><span class="p">])</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">json_dumper</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">p1</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -533,11 +536,6 @@ help with productivity and robustness of code.</p>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/linkml/linkml-runtime">linkml-runtime</a></p>
-<ul>
-<li><p>This repo has the minimal runtime required for a generated dataclasses model to work</p></li>
-</ul>
-</li>
 <li><p>Generators:</p>
 <ul>
 <li><p><a class="reference internal" href="../generators/python.html"><span class="doc std std-doc">Python Generator</span></a></p></li>

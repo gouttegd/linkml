@@ -307,6 +307,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -504,7 +505,8 @@
 <span class="sd">    :return: A validation report</span>
 <span class="sd">    :rtype: ValidationReport</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">loader</span> <span class="o">=</span> <span class="n">default_loader_for_file</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">schema_path</span> <span class="o">=</span> <span class="n">schema</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">default_loader_for_file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">schema_path</span><span class="o">=</span><span class="n">schema_path</span><span class="p">,</span> <span class="n">target_class</span><span class="o">=</span><span class="n">target_class</span><span class="p">)</span>
     <span class="n">validator</span> <span class="o">=</span> <span class="n">_get_default_validator</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="n">strict</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">validator</span><span class="o">.</span><span class="n">validate_source</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">target_class</span><span class="p">)</span></div>
 

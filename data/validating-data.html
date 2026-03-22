@@ -308,6 +308,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -617,6 +618,12 @@ specify the full dotted name (e.g.
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-validate-allow-null-for-optional-enums">
+<span class="sig-name descname"><span class="pre">--allow-null-for-optional-enums</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-validate-allow-null-for-optional-enums" title="Link to this definition">¶</a></dt>
+<dd><p>Downgrade enum validation errors to warnings when the value is null/empty and the slot is not required. Prevents ‘None is not one of […]’ and “’’ is not one of […]” errors for optional enum slots.</p>
 </dd></dl>
 
 <dl class="std option">
