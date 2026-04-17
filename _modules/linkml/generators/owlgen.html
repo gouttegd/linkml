@@ -1007,7 +1007,9 @@
                 <span class="n">min_card</span> <span class="o">=</span> <span class="n">slot</span><span class="o">.</span><span class="n">minimum_cardinality</span>
             <span class="k">elif</span> <span class="n">top_slot</span><span class="o">.</span><span class="n">minimum_cardinality</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">min_card</span> <span class="o">=</span> <span class="n">top_slot</span><span class="o">.</span><span class="n">minimum_cardinality</span>
-            <span class="k">elif</span> <span class="n">slot</span><span class="o">.</span><span class="n">required</span> <span class="ow">or</span> <span class="n">top_slot</span><span class="o">.</span><span class="n">required</span><span class="p">:</span>
+            <span class="k">elif</span> <span class="p">(</span>
+                <span class="n">slot</span><span class="o">.</span><span class="n">required</span> <span class="ow">or</span> <span class="n">top_slot</span><span class="o">.</span><span class="n">required</span> <span class="ow">or</span> <span class="n">slot</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">or</span> <span class="n">slot</span><span class="o">.</span><span class="n">key</span> <span class="ow">or</span> <span class="n">top_slot</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">or</span> <span class="n">top_slot</span><span class="o">.</span><span class="n">key</span>
+            <span class="p">):</span>
                 <span class="n">min_card</span> <span class="o">=</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">min_card</span> <span class="o">=</span> <span class="mi">0</span>
@@ -2016,7 +2018,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2021-2024, LinkML Authors
+                Copyright &#169; 2021-2026, LinkML Authors
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
