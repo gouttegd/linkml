@@ -269,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlalchemy.html">SQL Alchemy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlvalidation.html">SQL Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generators/typedb.html">TypeDB / TypeQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sssom.html">SSSOM</a></li>
@@ -703,6 +704,14 @@
         <span class="p">),</span>
         <span class="n">recommendation</span><span class="o">=</span><span class="s2">&quot;Remove the --validate flag from your command. Metamodel validation is now automatic.&quot;</span><span class="p">,</span>
         <span class="n">issue</span><span class="o">=</span><span class="mi">3259</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">Deprecation</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;lint-validate-only-flag&quot;</span><span class="p">,</span>
+        <span class="n">deprecated_in</span><span class="o">=</span><span class="n">SemVer</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">&quot;1.11.0&quot;</span><span class="p">),</span>
+        <span class="n">removed_in</span><span class="o">=</span><span class="n">SemVer</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">&quot;1.13.0&quot;</span><span class="p">),</span>
+        <span class="n">message</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;The --validate-only flag for linkml-lint is deprecated. Use &#39;linkml validate schema.yaml&#39; instead.&quot;</span><span class="p">),</span>
+        <span class="n">recommendation</span><span class="o">=</span><span class="s2">&quot;Use &#39;linkml validate schema.yaml&#39; for schema validation without lint rules.&quot;</span><span class="p">,</span>
+        <span class="n">issue</span><span class="o">=</span><span class="mi">3387</span><span class="p">,</span>
     <span class="p">),</span>
 <span class="p">)</span>  <span class="c1"># type: tuple[Deprecation, ...]</span>
 

@@ -269,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generators/sqlalchemy.html">SQL Alchemy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generators/sqlvalidation.html">SQL Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generators/typedb.html">TypeDB / TypeQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generators/sssom.html">SSSOM</a></li>
@@ -463,8 +464,7 @@
 <span class="sd">    :param strict: If ``True``, validation will stop after the first validation</span>
 <span class="sd">        error is found, Otherwise all validation problems will be reported.</span>
 <span class="sd">        Defaults to ``False``.</span>
-<span class="sd">    :raises ValueError: If a valid ``SchemaDefinition`` cannot be constructed</span>
-<span class="sd">        from the ``schema`` parameter.</span>
+<span class="sd">    :raises ValidationError: If requested to raise and validation errors are found.</span>
 <span class="sd">    :return: A validation report</span>
 <span class="sd">    :rtype: ValidationReport</span>
 <span class="sd">    &quot;&quot;&quot;</span>
