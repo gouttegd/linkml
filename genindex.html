@@ -268,6 +268,7 @@
 <li class="toctree-l2"><a class="reference internal" href="generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generators/sqlalchemy.html">SQL Alchemy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generators/sqlvalidation.html">SQL Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generators/bigquery.html">BigQuery DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generators/typedb.html">TypeDB / TypeQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generators/prefixmap.html">Prefix Generator</a></li>
@@ -360,6 +361,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="maintainers/index.html">Maintainers Guide</a><input aria-label="Toggle navigation of Maintainers Guide" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="maintainers/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maintainers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintainers/contributor-hierarchy.html">Contributor Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintainers/codeowners.html">CODEOWNERS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maintainers/deprecation.html">Deprecations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maintainers/code-of-conduct.html">Code of Conduct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maintainers/generator-governance.html">Generator and Validator Governance</a></li>
@@ -670,12 +673,32 @@
 </li>
         </ul></li>
         <li>
+    --dataset
+
+        <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-dataset">gen-bigquery command line option</a>
+</li>
+        </ul></li>
+        <li>
     --declarative
 
         <ul>
           <li><a href="generators/sqlalchemy.html#cmdoption-gen-sqla-declarative">gen-sqla command line option</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqla-declarative">linkml-generate-(full)-sqla command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --default-language
+
+        <ul>
+          <li><a href="generators/owl.html#cmdoption-gen-owl-default-language">gen-owl command line option</a>
+</li>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-default-language">gen-shacl command line option</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-owl-default-language">linkml-generate-(full)-owl command line option</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-default-language">linkml-generate-(full)-shacl command line option</a>
 </li>
         </ul></li>
         <li>
@@ -964,6 +987,8 @@
     --format
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-f">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-f">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-f">gen-doc command line option</a>
@@ -1205,6 +1230,8 @@
     --importmap
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-im">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-im">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-im">gen-doc command line option</a>
@@ -1530,6 +1557,8 @@
     --log_level
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-log_level">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-log_level">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-log_level">gen-doc command line option</a>
@@ -1719,6 +1748,8 @@
     --mergeimports
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-mergeimports">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-mergeimports">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-mergeimports">gen-doc command line option</a>
@@ -1872,6 +1903,8 @@
     --metadata
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-metadata">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-metadata">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-metadata">gen-doc command line option</a>
@@ -2012,6 +2045,8 @@
     --metauris
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-useuris">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-useuris">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-useuris">gen-doc command line option</a>
@@ -2541,6 +2576,8 @@
     --no-mergeimports
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-mergeimports">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-mergeimports">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-mergeimports">gen-doc command line option</a>
@@ -2685,6 +2722,8 @@
     --no-metadata
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-metadata">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-metadata">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-metadata">gen-doc command line option</a>
@@ -2888,6 +2927,15 @@
 </li>
         </ul></li>
         <li>
+    --no-rename-foreign-keys
+
+        <ul>
+          <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-rename-foreign-keys">gen-sqltables command line option</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-rename-foreign-keys">linkml-generate-(full)-sqltables command line option</a>
+</li>
+        </ul></li>
+        <li>
     --no-render-imports
 
         <ul>
@@ -2936,6 +2984,8 @@
     --no-stacktrace
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-stacktrace">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-stacktrace">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-stacktrace">gen-doc command line option</a>
@@ -3416,6 +3466,15 @@
 </li>
         </ul></li>
         <li>
+    --rename-foreign-keys
+
+        <ul>
+          <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-rename-foreign-keys">gen-sqltables command line option</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-rename-foreign-keys">linkml-generate-(full)-sqltables command line option</a>
+</li>
+        </ul></li>
+        <li>
     --render-imports
 
         <ul>
@@ -3538,6 +3597,8 @@
     --stacktrace
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-stacktrace">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-stacktrace">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-stacktrace">gen-doc command line option</a>
@@ -3895,6 +3956,8 @@
     --useuris
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-useuris">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-useuris">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-useuris">gen-doc command line option</a>
@@ -4053,6 +4116,8 @@
     --verbose
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-v">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-v">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-v">gen-doc command line option</a>
@@ -4188,6 +4253,8 @@
     --version
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-V">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-V">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-V">gen-doc command line option</a>
@@ -4445,6 +4512,8 @@
     -f
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-f">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-f">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-f">gen-doc command line option</a>
@@ -4605,6 +4674,8 @@
     -im
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-im">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-im">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-im">gen-doc command line option</a>
@@ -4896,6 +4967,8 @@
     -V
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-V">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-V">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-V">gen-doc command line option</a>
@@ -5049,6 +5122,8 @@
     -v
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-v">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-v">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-v">gen-doc command line option</a>
@@ -5404,6 +5479,8 @@
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticModule.base_model">base_model (linkml.generators.pydanticgen.template.PydanticModule attribute)</a>
 </li>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticClass.bases">bases (linkml.generators.pydanticgen.template.PydanticClass attribute)</a>
+</li>
+        <li><a href="generators/bigquery.html#linkml.generators.bigquerygen.BigQueryGenerator">BigQueryGenerator (class in linkml.generators.bigquerygen)</a>
 </li>
         <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SchemaDefinition.bindings">bindings (linkml_runtime.linkml_model.meta.SchemaDefinition attribute)</a>
 
@@ -6005,6 +6082,49 @@
   <h2>G</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    gen-bigquery command line option
+
+        <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-dataset">--dataset</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-f">--format</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-im">--importmap</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-log_level">--log_level</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-mergeimports">--mergeimports</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-metadata">--metadata</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-useuris">--metauris</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-mergeimports">--no-mergeimports</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-metadata">--no-metadata</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-stacktrace">--no-stacktrace</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-stacktrace">--stacktrace</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-useuris">--useuris</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-v">--verbose</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-V">--version</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-f">-f</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-im">-im</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-V">-V</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-v">-v</a>
+</li>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-arg-YAMLFILE">YAMLFILE</a>
+</li>
+        </ul></li>
         <li>
     gen-csv command line option
 
@@ -6643,6 +6763,8 @@
 </li>
           <li><a href="generators/owl.html#cmdoption-gen-owl-consolidate-cardinality-axioms">--consolidate-cardinality-axioms</a>
 </li>
+          <li><a href="generators/owl.html#cmdoption-gen-owl-default-language">--default-language</a>
+</li>
           <li><a href="generators/owl.html#cmdoption-gen-owl-default-permissible-value-type">--default-permissible-value-type</a>
 </li>
           <li><a href="generators/owl.html#cmdoption-gen-owl-enum-inherits-as-subclass-of">--enum-inherits-as-subclass-of</a>
@@ -6880,6 +7002,8 @@
           <li><a href="generators/protobuf.html#cmdoption-gen-proto-arg-YAMLFILE">YAMLFILE</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li>
     gen-pydantic command line option
 
@@ -6933,8 +7057,6 @@
           <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-arg-YAMLFILE">YAMLFILE</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li>
     gen-python command line option
 
@@ -7115,6 +7237,8 @@
 
         <ul>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-closed">--closed</a>
+</li>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-default-language">--default-language</a>
 </li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-include-annotations">--exclude-annotations</a>
 </li>
@@ -7356,6 +7480,8 @@
 </li>
           <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-metadata">--no-metadata</a>
 </li>
+          <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-rename-foreign-keys">--no-rename-foreign-keys</a>
+</li>
           <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-stacktrace">--no-stacktrace</a>
 </li>
           <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-use-foreign-keys">--no-use-foreign-keys</a>
@@ -7363,6 +7489,8 @@
           <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-python-import">--python-import</a>
 </li>
           <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-relmodel-output">--relmodel-output</a>
+</li>
+          <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-rename-foreign-keys">--rename-foreign-keys</a>
 </li>
           <li><a href="generators/sqltable.html#cmdoption-gen-sqltables-sqla-file">--sqla-file</a>
 </li>
@@ -7686,6 +7814,8 @@
         <li><a href="generators/rust.html#linkml.generators.rustgen.RustGenerator.generate_class">generate_class() (linkml.generators.rustgen.RustGenerator method)</a>
 </li>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.PydanticGenerator.generate_collection_key">generate_collection_key() (linkml.generators.pydanticgen.PydanticGenerator method)</a>
+</li>
+        <li><a href="generators/bigquery.html#linkml.generators.bigquerygen.BigQueryGenerator.generate_ddl">generate_ddl() (linkml.generators.bigquerygen.BigQueryGenerator method)</a>
 </li>
         <li><a href="generators/csv.html#linkml.generators.csvgen.CsvGenerator.generate_header">generate_header() (linkml.generators.csvgen.CsvGenerator method)</a>
 </li>
@@ -9125,6 +9255,8 @@
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-owl-consolidate-cardinality-axioms">--consolidate-cardinality-axioms</a>
 </li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-owl-default-language">--default-language</a>
+</li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-owl-default-permissible-value-type">--default-permissible-value-type</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-owl-enum-inherits-as-subclass-of">--enum-inherits-as-subclass-of</a>
@@ -9650,6 +9782,8 @@
         <ul>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-closed">--closed</a>
 </li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-default-language">--default-language</a>
+</li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-include-annotations">--exclude-annotations</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-exclude-imports">--exclude-imports</a>
@@ -9890,6 +10024,8 @@
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-metadata">--no-metadata</a>
 </li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-rename-foreign-keys">--no-rename-foreign-keys</a>
+</li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-stacktrace">--no-stacktrace</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-use-foreign-keys">--no-use-foreign-keys</a>
@@ -9897,6 +10033,8 @@
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-python-import">--python-import</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-relmodel-output">--relmodel-output</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-rename-foreign-keys">--rename-foreign-keys</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-sqltables-sqla-file">--sqla-file</a>
 </li>
@@ -11190,9 +11328,11 @@
 </li>
         <li><a href="generators/rust.html#linkml.generators.rustgen.RustGenerator.serde">serde (linkml.generators.rustgen.RustGenerator attribute)</a>
 </li>
-        <li><a href="generators/docgen.html#linkml.generators.docgen.DocGenerator.serialize">serialize() (linkml.generators.docgen.DocGenerator method)</a>
+        <li><a href="generators/bigquery.html#linkml.generators.bigquerygen.BigQueryGenerator.serialize">serialize() (linkml.generators.bigquerygen.BigQueryGenerator method)</a>
 
         <ul>
+          <li><a href="generators/docgen.html#linkml.generators.docgen.DocGenerator.serialize">(linkml.generators.docgen.DocGenerator method)</a>
+</li>
           <li><a href="generators/erdiagram.html#linkml.generators.erdiagramgen.ERDiagramGenerator.serialize">(linkml.generators.erdiagramgen.ERDiagramGenerator method)</a>
 </li>
           <li><a href="generators/graphql.html#linkml.generators.graphqlgen.GraphqlGenerator.serialize">(linkml.generators.graphqlgen.GraphqlGenerator method)</a>
@@ -11282,10 +11422,10 @@
 </li>
         <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.slot_leaves">slot_leaves() (linkml_runtime.utils.schemaview.SchemaView method)</a>
 </li>
-        <li><a href="code/utils.html#linkml.utils.generator.Generator.slot_name">slot_name() (linkml.utils.generator.Generator method)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="code/utils.html#linkml.utils.generator.Generator.slot_name">slot_name() (linkml.utils.generator.Generator method)</a>
+</li>
         <li><a href="code/utils.html#linkml.utils.schemaloader.SchemaLoader.slot_name_for">slot_name_for() (linkml.utils.schemaloader.SchemaLoader static method)</a>
 </li>
         <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.slot_name_mappings">slot_name_mappings() (linkml_runtime.utils.schemaview.SchemaView method)</a>
@@ -11722,6 +11862,8 @@
     YAMLFILE
 
         <ul>
+          <li><a href="generators/bigquery.html#cmdoption-gen-bigquery-arg-YAMLFILE">gen-bigquery command line option</a>
+</li>
           <li><a href="generators/csv.html#cmdoption-gen-csv-arg-YAMLFILE">gen-csv command line option</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-arg-YAMLFILE">gen-doc command line option</a>

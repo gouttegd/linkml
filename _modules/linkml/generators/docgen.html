@@ -269,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlalchemy.html">SQL Alchemy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlvalidation.html">SQL Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generators/bigquery.html">BigQuery DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/typedb.html">TypeDB / TypeQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/prefixmap.html">Prefix Generator</a></li>
@@ -361,6 +362,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../maintainers/index.html">Maintainers Guide</a><input aria-label="Toggle navigation of Maintainers Guide" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maintainers/contributor-hierarchy.html">Contributor Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maintainers/codeowners.html">CODEOWNERS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/deprecation.html">Deprecations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/code-of-conduct.html">Code of Conduct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/generator-governance.html">Generator and Validator Governance</a></li>
@@ -809,6 +812,8 @@
                 <span class="k">if</span> <span class="n">curie</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">curie</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">camelcase</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">element</span><span class="p">)</span><span class="o">.</span><span class="n">class_name</span> <span class="o">==</span> <span class="s2">&quot;subset_definition&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">underscore</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">camelcase</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
